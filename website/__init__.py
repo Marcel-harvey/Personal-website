@@ -17,11 +17,9 @@ def create_app():
     database.init_app(app)    
     
     # Relative imports for all the views
-    from .auth import auth
     from .views import views
     
     # Blueprint for each of the views, the prefix is set to none, can set to other if need be
-    app.register_blueprint(auth)
     app.register_blueprint(views)
     
     # Import the database that was created for the users from models.py
