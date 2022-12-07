@@ -12,8 +12,5 @@ def create_app():
     # Blueprint for each of the views, the prefix is set to none, can set to other if need be
     app.register_blueprint(views)
     
-    # Import the database that was created for the users from models.py
-    from .models import User, Parts, PickingSlip
-    
     return app
         

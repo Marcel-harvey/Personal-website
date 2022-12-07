@@ -1,0 +1,230 @@
+/*  Main setup of page  */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Serif 4', sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+
+/* Variables */
+:root {
+    --spacing: 5em;
+}
+
+
+
+/*  Navigation Bar */
+
+nav {
+    background: black;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 7px 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    z-index: 333;
+}
+
+#check {
+    display: none;
+}
+
+#check i {
+    color: white;
+}
+
+
+
+/* MAIN SCREEN */
+.main_screen {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    padding-bottom: var(--spacing);
+}
+
+.main_screen_logo {
+    min-height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)), url('/static/Images/Background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+.main_screen_logo h1 {
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+
+/* SERVICES */
+.provided_services {
+    min-width: 100%;    
+    margin: auto;
+    line-height: 1.4rem;
+}
+
+.provided_services_container {
+    width: 90%;
+    padding-bottom: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.provided_services_headings {
+    box-sizing: border-box;
+    flex-basis: 45%;
+}
+
+.provided_services_headings h1 {
+    text-align: center;
+}
+
+
+
+/* Responsive Design Section */
+@media (max-width: 982px) {
+    h1 {
+        font-size: 20px;
+    }
+
+
+    /* Variables */
+    :root {
+        --spacing: 5em;
+    }
+
+
+
+    /* Navigation Bar */
+    .logo {
+        font-size: 15px;
+        padding-left: 50px;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+
+
+    /* SERVICES */
+    .provided_services_container {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .provided_services_headings {
+        padding-bottom: var(--spacing);
+    }
+}
+
+
+@media (max-width: 858px) {
+    /* Navigation Bar */
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.3s;
+    }    
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;        
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
