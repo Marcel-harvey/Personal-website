@@ -149,6 +149,13 @@ nav ul li a:hover {
 }
 
 .provided_services_headings {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.9)), url('/static/Images/code.jpg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black, 15px 10px 30px grey inset;
     box-sizing: border-box;
     flex-basis: 45%;
 }
@@ -168,7 +175,7 @@ nav ul li a:hover {
 
     /* Variables */
     :root {
-        --spacing: 5em;
+        --spacing: 2em;
     }
 
 
@@ -192,7 +199,7 @@ nav ul li a:hover {
     }
 
     .provided_services_headings {
-        padding-bottom: var(--spacing);
+        margin-bottom: var(--spacing);
     }
 }
 
