@@ -5,8 +5,15 @@
     font-family: 'Source Serif 4', sans-serif;
 }
 
+html {
+    background: url(/static/Images/code.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
-    background-color: lightgrey;
     overflow-x: hidden;
 }
 
@@ -111,7 +118,7 @@ nav ul li a:hover {
     width: 100%;
     height: 90vh;
     position: relative;
-    padding-bottom: var(--spacing);
+    margin-bottom: var(--spacing);
 }
 
 .main_screen_logo {
@@ -135,14 +142,16 @@ nav ul li a:hover {
 
 /* SERVICES */
 .provided_services {
-    min-width: 100%;    
-    margin: auto;
+    min-width: 100%;
     line-height: 1.4rem;
+    margin-bottom: var(--spacing);
+    padding-top: var(--spacing);
+    background-image: linear-gradient(rgba(111, 177, 247, 01),
+    rgba(200, 200, 200, 0.8));
 }
 
 .provided_services_container {
     width: 90%;
-    padding-bottom: var(--spacing);
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -158,10 +167,39 @@ nav ul li a:hover {
     box-shadow: 5px 5px 15px black, 15px 10px 30px grey inset;
     box-sizing: border-box;
     flex-basis: 45%;
+    margin-bottom: var(--spacing);
 }
 
 .provided_services_headings h1 {
     text-align: center;
+}
+
+
+
+/* ABOUT */
+.about_us {
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    margin-bottom: var(--spacing);
+    background-image: linear-gradient(rgba(111, 177, 247, 01),
+    rgba(200, 200, 200, 0.8));
+    padding: 1em 0;
+}
+
+.about_us h1 {
+    text-align: center;
+}
+
+.about_us_paragraph {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_us_paragraph p {
+    flex-basis: 45%;
 }
 
 
