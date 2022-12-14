@@ -36,6 +36,7 @@ h3 {
 
 p {
     font-size: 16px;
+    line-height: 21px;
 }
 
 
@@ -50,7 +51,6 @@ p {
 
 
 /*  Navigation Bar */
-
 nav {
     background: black;
     height: 80px;
@@ -251,6 +251,43 @@ nav ul li a:hover {
 
 
 
+/* FOOTER */
+.footer {
+    width: 100%;
+    min-height: 150px;
+    background-color: lightgray;
+    padding-top: 1em;
+}
+
+.footer_container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.footer_row {
+    flex-basis: 60%;
+    box-sizing: border-box;
+}
+
+.footer_row h3 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.footer_row p {
+    line-height: 20px;
+}
+
+.footer_row a {
+    text-decoration: none;
+}
+
+
+
 /* Responsive Design Section */
 @media (max-width: 982px) {
     h1 {
@@ -317,6 +354,7 @@ nav ul li a:hover {
     /* Navigation Bar */
     .checkbtn {
         display: block;
+        z-index: 9999;
     }
 
     nav ul {
